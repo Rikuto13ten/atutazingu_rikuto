@@ -1,0 +1,537 @@
+@charset "utf-8";
+/* 共通のスタイル */
+
+html {
+    font-family: ro-nikkatsu-sei-kai-std, serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+::selection {
+    background: #000000;
+    color: #ffffff;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+h1, h2, h3 {
+    font-weight: lighter;
+}
+
+
+header {
+    position: relative;
+    background-image: url('../images/main.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background-position: bottom;
+    color: white;
+    overflow: hidden;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* タイトル */
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 4.8rem;
+    font-weight: lighter;
+}
+
+header h2 {
+    font-size: 2.4rem;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    line-height: 4rem;
+    font-weight: lighter;
+    text-indent: -5rem;
+}
+
+header button {
+    position: absolute;
+    bottom: 24px;
+    left: 4%;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-bottom: 4px;
+    border-bottom: rgba(255, 255, 255, 0) 1px solid;
+    transition: 0.3s;
+}
+
+header button:hover {
+    box-sizing: border-box;
+    border-bottom: #fff 1px solid;
+}
+
+/* nav */
+
+.humburger {
+    display: none;
+}
+
+.resnav {
+    visibility: hidden;
+}
+
+.pcnav {
+    width: 100%;
+    position: absolute;
+    top: 24px;
+    right: 2%;
+    padding-top: 10px;
+}
+
+.pcnav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pcnav li {
+    margin-left: 3%;
+}
+
+.pcnav li a {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.pcnav a::after {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    content: '';
+    width: 0.5px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transform: scale(1, 0);
+    transform-origin: top right;
+    transition: transform .5s;
+}
+
+.pcnav a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* main//////////////////////////////////////////// */
+
+main {
+    background-image: url('../images/crossword.png');
+    background-size: 1000px;
+    padding: 120px 0;
+}
+
+/* 熱田神宮について */
+.atuta{
+    width: 100%;
+}
+
+.con1 {
+    width: 1000px;
+    background-image: url('../images/con1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 40px 80px;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+.con1 h2{
+    font-size: 4rem;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    letter-spacing: 1rem;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+}
+.con1-des{
+    font-size: 2rem;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    line-height: 3rem;
+    margin-left: 40px;
+}
+.con1 a{
+    padding: 40px 16px;
+    background-color: #00000000;
+    color: #fff;
+    border: 1px solid #fff;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.con1 a:hover{
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+/* event//////////////////////////////////////////// */
+
+.event {
+    background-image: url('../images/cloud.svg');
+    background-size: 100%;
+    margin-top: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.event>h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.event>p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.event>div {
+    position: relative;
+}
+
+.event img {
+    width: 100%;
+}
+
+.event-cont{
+    width: 80%;
+    margin: 0 auto;
+    background-image: url('../images/event.jpg');
+    background-size: cover;
+    padding: 40px;
+}
+    .event-title{
+        width: 100%;
+        border-bottom: 2px solid #fff;
+        color: #fff;
+    }
+    .event-title h3{
+        font-size: 2rem;
+        padding: 0 0 10px 0;
+    }
+    .event-title h2{
+        font-size: 4rem;
+        padding: 0 0 10px 0;
+    }
+
+    .event-des{
+        padding: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .event-des h3{
+        color: #fff;
+        font-size: 2.4rem;
+        padding: 0 0 18px 0;
+    }
+    .event-des p{
+        color: #fff;
+        line-height: 2rem;
+    }
+
+    .event-button{
+        text-align: center;
+        margin-top: 40px;
+    }
+    .event-button button{
+        padding: 16px 40px;
+        background-color: #00000000;
+        color: #fff;
+        border: 1px solid #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .event-button button:hover{
+        background-color: #fff;
+        color: #000;
+        transition: 0.3s;
+    }
+
+/* special */
+
+.special {
+    margin-top: 120px;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.special>h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+}
+
+.special>div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.special a {
+    width: 30%;
+    height: 216px;
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.special a:hover {
+    opacity: 0.6;
+}
+
+.spe1 {
+    background-image: url('../images/spe1.jpg');
+    background-size: cover;
+}
+
+.spe2 {
+    background-image: url('../images/spe2.jpg');
+    background-size: cover;
+}
+
+.spe3 {
+    background-image: url('../images/spe3.jpg');
+    background-size: cover;
+}
+
+.special div a h2 {
+    width: 100%;
+    font-size: 3.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.special div a p {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* お知らせ */
+
+.news {
+    margin-top: 120px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.news h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+}
+
+.news p {}
+
+dl {
+    width: 50%;
+    margin: auto;
+    padding: 15px 0;
+    text-align: left;
+    line-height: 2.4rem;
+}
+
+dt {
+    padding: 0 40px 5px 0;
+    float: left;
+}
+
+dd {}
+
+footer {
+    background-image: url('../images/footer.svg');
+    color: #fff;
+    padding: 40px;
+}
+
+footer .f-title {
+    padding-top: 40px;
+    font-size: 3.2rem;
+}
+
+footer div {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer address p {
+    line-height: 24px;
+}
+
+footer .f-tel {}
+
+footer small {
+    align-self: flex-end;
+}
+
+/* ######### 1300px以下 ###################### */
+@media screen and (max-width: 1300px){
+    .con1{
+        width: 80%;
+    }
+}
+
+/* ########### 769px以上～1000px以下 ########### */
+
+@media screen and (max-width: 1000px) {
+    main {
+        background-image: url('../images/crossword.png');
+        background-size: 1000px;
+        margin: auto;
+    }
+    dt {
+        padding: 0 10px 5px 0;
+    }
+    /*　ハンバーガーボタン　*/
+    .hamburger {
+        display: block;
+        position: fixed;
+        z-index: 3;
+        right: 13px;
+        top: 12px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .hamburger span {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 6px;
+        background: rgb(255, 255, 255);
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    .hamburger span:nth-child(1) {
+        top: 10px;
+    }
+    .hamburger span:nth-child(2) {
+        top: 20px;
+    }
+    .hamburger span:nth-child(3) {
+        top: 30px;
+    }
+    /* ナビ開いてる時のボタン */
+    .hamburger.active span:nth-child(1) {
+        top: 16px;
+        left: 6px;
+        background: rgb(0, 0, 0);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .hamburger.active span:nth-child(2), .hamburger.active span:nth-child(3) {
+        top: 16px;
+        background: rgb(0, 0, 0);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .pcnav {
+        display: none;
+    }
+    .resnav {
+        visibility: visible;
+    }
+    .resnav {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+        text-align: center;
+        width: 30%;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity .6s ease, visibility .6s ease;
+    }
+    .resnav ul {
+        margin: 50px auto 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+    .resnav ul li {
+        list-style-type: none;
+        padding: 0;
+        padding-top: 10%;
+        width: 100%;
+        transition: .4s all;
+    }
+    .resnav ul li:last-child {
+        padding-bottom: 0;
+    }
+    .resnav ul li:hover {}
+    .resnav ul li a {
+        display: inline;
+        padding: 1em 0;
+        text-decoration: none;
+    }
+    .resnav a:hover {
+        text-decoration: underline;
+    }
+    /* このクラスを、jQueryで付与・削除する */
+    .resnav.active {
+        opacity: 100;
+    }
+}
+
+/* ########### 600px以上～768px以下 ########### */
+
+@media screen and (max-width: 768px) {}
+
+/* ########### 599px以下 ########### */
+
+@media screen and (max-width: 599px) {}
